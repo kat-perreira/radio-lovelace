@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './styles/Playlist.css';
 
 import Track from './Track';
-
+// total time of the playlist
 const calculatePlayTime = (tracks) => {
   let minutes = 0;
   let seconds = 0;
@@ -30,8 +30,9 @@ const Playlist = (props) => {
   const trackCount = tracks.length;
   const playtime = calculatePlayTime(tracks);
   const trackElements = tracks.map((track, i) => {
-    // We use "spread syntax" here to pass in all the properties of 
+    // We use "spread syntax" here to pass in all the properties of
     // the variable 'track' as props. Go look it up!
+    // brining everything from track
     return (
       <Track
         key={i}
